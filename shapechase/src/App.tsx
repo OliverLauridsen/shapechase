@@ -1,24 +1,39 @@
-import React, { useState } from 'react';
-import './App.scss';
-import Header from './components/header';
-import CardContainer from './components/card_container';
+import './App.scss'
+import Header from './components/HeaderMain'
+import CardContainer from './components/CardContainer'
+import TrainingLog from './components/TrainingLog'
+import WorkoutProgram from './components/WorkoutProgram'
+import Nutrition from './components/Nutrition'
+import Analytics from './components/Analytics'
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
-  const [count, setCount] = useState(4);
-
+const App = () => {
 
   return (
-    <div className="app">
-      <span className="front_page_wrapper">
-        <Header />
-        <main className="app_main">
-          <CardContainer />
-        </main>
-      </span>
-    </div>
-  ); 
+    <Router>
+      <div className="app">
+        <span className="front_page_wrapper">
+          <Header />
+          <main className="app_main">
+            <Switch>
+              <Route exact path="/" component={CardContainer} />
+              <Route path="/training-log" component={TrainingLog} />
+              <Route path="/workout-programs" component={WorkoutProgram} />
+              <Route path="/nutrition" component={Nutrition} />
+              <Route path="/analytics" component={Analytics} />
+            </Switch>
+          </main>
+        </span>
+      </div>
+      </Router>
+  ) 
   
 }
 
-export default App;
+
+export default App

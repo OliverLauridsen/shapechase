@@ -14,6 +14,9 @@ p {
   font-family: $base-font-family;
 }
 
+a {
+  text-decoration: none;
+}
 .navigation_menu {
   background-color: $background-darker;
   height:100vh;

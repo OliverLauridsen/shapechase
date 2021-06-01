@@ -1,6 +1,4 @@
-import React from 'react';
-
-function card_container() {
+const CardContainer = () => {
   return (
     <div className="grid_container">
         <div className="grid_item grid_header">Header</div>
@@ -15,4 +13,4 @@ function card_container() {
   
 }
 
-export default card_container;
+export default CardContainer;

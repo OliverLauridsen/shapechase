@@ -1,7 +1,7 @@
-import React from 'react';
-import UserAvatar from './user_avatar';
-import MenuItem from './menu_item';
-function header() {
+import UserAvatar from './UserAvatar';
+import MenuItem from './MenuItem';
+
+const HeaderMain = () => {
     return (
         <header className="navigation_menu">
             <UserAvatar />
@@ -12,4 +12,4 @@ function header() {
     
   }
   
-export default header;
+export default HeaderMain;

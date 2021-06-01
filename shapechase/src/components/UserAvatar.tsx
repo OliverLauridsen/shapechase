@@ -1,8 +1,6 @@
-import React from 'react';
 import userImage from '../assets/images/user_avatar.png';
 
-
-function user_avatar() {
+const UserAvatar = () => {
     return (
         <div className="user_avatar_wrapper">
           <img src={userImage} className="user_avatar_photo" alt="logo" />
@@ -12,4 +10,4 @@ function user_avatar() {
     
   }
   
-export default user_avatar;
+export default UserAvatar;
