@@ -1,5 +1,6 @@
-import UserAvatar from './UserAvatar';
-import MenuItem from './MenuItem';
+import UserAvatar from './UserAvatar'
+import MenuItem from './MenuItem'
+
 
 const HeaderMain = () => {
     return (

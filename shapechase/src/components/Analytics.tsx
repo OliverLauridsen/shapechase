@@ -1,7 +1,9 @@
 const Analytics = () => {
     return (
         <div>
-            Analytics
+            <h2>
+                Analytics
+            </h2>
         </div>
     )
 }

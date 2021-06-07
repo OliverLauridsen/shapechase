@@ -5,6 +5,7 @@ import TrainingLog from './components/TrainingLog'
 import WorkoutProgram from './components/WorkoutProgram'
 import Nutrition from './components/Nutrition'
 import Analytics from './components/Analytics'
+import Burger from './components/Burger/Burger'
 
 import {
   BrowserRouter as Router,
@@ -19,6 +20,7 @@ const App = () => {
       <div className="app">
         <span className="front_page_wrapper">
           <Header />
+          <Burger />
           <main className="app_main">
             <Switch>
               <Route exact path="/" component={CardContainer} />

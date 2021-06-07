@@ -1,8 +1,6 @@
 const WorkoutProgram = () => {
     return (
-        <div>
-            Workout Program
-        </div>
+        <h2> Workout Program </h2>
     )
 }
 
