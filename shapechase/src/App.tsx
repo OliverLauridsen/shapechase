@@ -6,6 +6,7 @@ import WorkoutProgram from './components/WorkoutProgram'
 import Nutrition from './components/Nutrition'
 import Analytics from './components/Analytics'
 import Burger from './components/Burger/Burger'
+import styled from 'styled-components'
 
 import {
   BrowserRouter as Router,
@@ -14,14 +15,13 @@ import {
 } from 'react-router-dom';
 
 const App = () => {
-
   return (
     <Router>
       <div className="app">
-        <span className="front_page_wrapper">
+        <StyledFrontPageWrapper>
           <Header />
           <Burger />
-          <main className="app_main">
+          <StyledMain>
             <Switch>
               <Route exact path="/" component={CardContainer} />
               <Route path="/training-log" component={TrainingLog} />
@@ -29,13 +29,32 @@ const App = () => {
               <Route path="/nutrition" component={Nutrition} />
               <Route path="/analytics" component={Analytics} />
             </Switch>
-          </main>
-        </span>
+          </StyledMain>
+        </StyledFrontPageWrapper>
       </div>
       </Router>
   ) 
-  
 }
+
+
+const StyledFrontPageWrapper = styled.span`
+  display:flex;
+  flex-direction: row;
+`
+
+const StyledMain = styled.main`
+  background-color: #25294A;
+  display: flex;
+  color: white;
+  width:100%;
+  min-height: 100vh;
+
+  @media (min-width: 1240px) {
+    padding: 25px 50px 0 50px;
+  }
+
+`
+
 
 
 export default App

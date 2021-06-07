@@ -1,16 +1,33 @@
 import UserAvatar from './UserAvatar'
 import MenuItem from './MenuItem'
-
-
+import styled from 'styled-components';
+  
 const HeaderMain = () => {
     return (
-        <header className="navigation_menu">
+        <StyledHeader className="navigation_menu">
             <UserAvatar />
             <MenuItem />
-        </header>
-
+        </StyledHeader>
     ); 
-    
   }
+
+const StyledHeader = styled.header`
+
+    & {
+        @media (max-width: 1240px) {
+            display: none;
+
+        }
+
+        background-color: #202442;
+        height:100vh;
+        width:25%;
+        padding: 25px;
+        
+
+    }
   
+
+`
+
 export default HeaderMain;

@@ -21,7 +21,6 @@ const UserFormInput = ({ className }: BaseProps, props: BaseProps) => {
           Weight:
         </label>
         <input type="text" {...bindWeight} />
-
         <button type="submit" value="Submit"> Add Set </button>
       </form>
     );
