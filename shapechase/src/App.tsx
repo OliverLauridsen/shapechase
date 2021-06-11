@@ -7,6 +7,9 @@ import Nutrition from './components/Nutrition'
 import Analytics from './components/Analytics'
 import Burger from './components/Burger/Burger'
 import styled from 'styled-components'
+import Menu from './components/Burger/Menu'
+
+import { useState } from 'react'
 
 import {
   BrowserRouter as Router,
@@ -14,13 +17,18 @@ import {
   Route
 } from 'react-router-dom';
 
+
 const App = () => {
+
+  const [open, setOpen] = useState(false);
+
   return (
     <Router>
       <div className="app">
         <StyledFrontPageWrapper>
           <Header />
-          <Burger />
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
           <StyledMain>
             <Switch>
               <Route exact path="/" component={CardContainer} />
@@ -54,7 +62,5 @@ const StyledMain = styled.main`
   }
 
 `
-
-
 
 export default App

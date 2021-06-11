@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// User Input Hook
 export const useInput = (initialValue: any) => {
   const [value, setValue] = useState(initialValue);
 
@@ -15,4 +16,5 @@ export const useInput = (initialValue: any) => {
     }
   };
 };
+
 

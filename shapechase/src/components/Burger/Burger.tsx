@@ -1,9 +1,25 @@
 import styled from 'styled-components';
+import { FunctionComponent, useState } from 'react'
 
-export const StyledBurger = styled.button`
+interface Props {
+  open: boolean
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Burger: FunctionComponent<Props> = ({ open, setOpen } ) => {
+  return (
+    <StyledBurger open={ open } setOpen={() => false} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
+    </StyledBurger>
+  )
+}
+
+export const StyledBurger = styled.button<Props>`
   position: absolute;
-  top: 5%;
-  left: 2rem;
+  top: 2rem;
+  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,6 +30,7 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+
   
   &:focus {
     outline: none;
@@ -24,20 +41,24 @@ export const StyledBurger = styled.button`
     height: 0.25rem;
     background: white;
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     position: relative;
     transform-origin: 1px;
-  }
-`;
 
-const Burger = () => {
-  return (
-    <StyledBurger>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
-  )
-}
+    :first-child {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
+  }
+
+`;
 
 export default Burger;
