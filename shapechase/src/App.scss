@@ -7,30 +7,29 @@
 // $hover-color: #7F5CDA;
 
 @font-face {
-  font-family: 'Assistant';
-  src: local('Assistant'), url(./assets/fonts/Assistant-SemiBold.ttf) format('truetype');
+	font-family: "Assistant";
+	src: local("Assistant"),
+		url(./assets/fonts/Assistant-SemiBold.ttf) format("truetype");
 }
 
 p {
-  font-family: 'Assistant';
+	font-family: "Assistant";
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 small {
-  color: #655E92;
-  font-weight: 700;
+	color: #655e92;
+	font-weight: 700;
 }
 
 form {
-  margin-top: 25px;
+	margin-top: 25px;
 }
-
 
 p {
-  margin: 0;
-  color: #fff;
+	margin: 0;
+	color: #fff;
 }
-
